@@ -1,0 +1,50 @@
+
+.box {
+    position: absolute;       /* 화면 기준 절대 위치 */
+    top: 50%;                 /* 화면 세로 중앙 */
+    left: 50%;                /* 화면 가로 중앙 */
+    transform: translate(-50%, -50%); /* 박스 크기 반만 이동해서 정확히 중앙 */
+    width: 500px;
+    height: 200px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        height: 180px;
+        background-color: white;
+    }
+    .mainbtns button {
+        margin: 5px;
+        padding: 5px 10px;
+        background-color: #005eff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+/* 박스 위에 겹치게 보이도록 */
+.mainbtns {
+    position: absolute;       /* 절대 위치 */
+    top: 50%;                 /* 부모 box 기준 중앙 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정확히 중앙 정렬 */
+    text-align: center;
+    z-index: 10;              /* box 위에 표시 */
+}
+
+/* 버튼 스타일 예시 */
+.mainbtns button {
+    margin: 5px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #005eff;
+    color: white;
+    cursor: pointer;
+}
